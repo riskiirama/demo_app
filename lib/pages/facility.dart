@@ -1,6 +1,13 @@
 part of 'pages.dart';
 
 class FacilityPage extends StatelessWidget {
+  static List<Person> people = [
+    Person('Mike', 'Barron', 64),
+    Person('Todd', 'Black', 30),
+    Person('Ahmad', 'Edwards', 55),
+    Person('Anthony', 'Johnson', 67),
+    Person('Annette', 'Brooks', 39),
+  ];
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -22,11 +29,26 @@ class FacilityPage extends StatelessWidget {
                     style: tblack.copyWith(fontSize: 18),
                   ),
                   Spacer(),
-                  Icon(Icons.date_range),
+                  GestureDetector(
+                    onTap: () {
+                      showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime.now(),
+                          lastDate: DateTime.now());
+                    },
+                    child: Icon(Icons.date_range),
+                  ),
                   SizedBox(
                     width: 10,
                   ),
-                  Icon(Icons.search),
+                  GestureDetector(
+                    onTap: () {
+                      showSearch(
+                          context: context, delegate: CustomSearchDelegate());
+                    },
+                    child: Icon(Icons.search),
+                  ),
                 ],
               ),
             ),
@@ -871,5 +893,38 @@ class TileFacility extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class Person {
+  final String name, surname;
+  final num age;
+
+  Person(this.name, this.surname, this.age);
+}
+
+class CustomSearchDelegate extends SearchDelegate {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    // TODO: implement buildActions
+    return [];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    // TODO: implement buildLeading
+    return SizedBox();
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // TODO: implement buildResults
+    return SizedBox();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    // TODO: implement buildSuggestions
+    return SizedBox();
   }
 }

@@ -27,6 +27,7 @@ dependencies:
     sdk: flutter
   google_fonts: ^2.1.0
   provider: ^6.0.1
+  search_page: ^2.0.0+1
   sleek_circular_slider: ^2.0.1
   step_progress_indicator: ^1.0.1
 

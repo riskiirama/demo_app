@@ -46,7 +46,13 @@ class DashboardPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Icon(Icons.search)
+                  GestureDetector(
+                    onTap: () {
+                      showSearch(
+                          context: context, delegate: CustomSearchDelegate());
+                    },
+                    child: Icon(Icons.search),
+                  ),
                 ],
               ),
             ),
