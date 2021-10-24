@@ -18,18 +18,22 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.7.0 <3.0.0'
 
 dependencies:
   contained_tab_bar_view: ^0.8.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_inner_drawer: ^1.0.0+1
+  flutter_slider_drawer: ^2.0.0
   google_fonts: ^2.1.0
+  paginated_search_bar: ^1.1.0
   provider: ^6.0.1
   search_page: ^2.0.0+1
   sleek_circular_slider: ^2.0.1
   step_progress_indicator: ^1.0.1
+  suggestion_search_bar: ^0.0.2
 
 dev_dependencies:
   flutter_test:

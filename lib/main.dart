@@ -23,7 +23,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) => MainPage(),
+          '/': (context) => Login(),
+          '/register': (context) => Register(),
+          '/main-page': (context) => MainPage(),
+          '/bahria-page': (context) => BahriaTown(),
         },
       ),
     );

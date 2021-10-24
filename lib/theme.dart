@@ -6,9 +6,13 @@ double defaultMargin = 30.0;
 Color mblack = Colors.black;
 Color mwhite = Colors.white;
 Color mgrey = Colors.grey;
+Color morange = Color(0xffeb472f);
 
 TextStyle tblack = GoogleFonts.poppins(
   color: mblack,
+);
+TextStyle torange = GoogleFonts.poppins(
+  color: morange,
 );
 
 TextStyle twhite = GoogleFonts.poppins(
